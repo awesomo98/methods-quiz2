@@ -9,6 +9,21 @@ module MethodsQuiz2
 			return (1 + die2)
 		end
 	end
+
+	def max_maybe(a,b)
+		if (a < b) && ((a % 5) != (b % 5))
+			return b
+		elsif (a > b) && ((a % 5) != (b % 5))
+			return a
+		end
+		if (a < b) && (a % 5) == (b % 5)
+			return a
+		elsif (a > b) && ((a % 5) == (b % 5))
+			return b
+		end
+		(a == b)
+			0
+	end
 	
 
 end
