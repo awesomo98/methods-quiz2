@@ -24,6 +24,19 @@ module MethodsQuiz2
 		(a == b)
 			0
 	end
+
+	def squirrels_play?(temperature, summer)
+	if (summer) && (temperature >= 60 && temperature <= 100)
+		return true
+	elsif (!summer) && (temperature >= 60 && temperature <= 90)
+			return true
+		end
+
+	end
+
+	def red_ticket
+		
+	end
 	
 
 end
