@@ -82,4 +82,9 @@ module MethodsQuiz2Tests
 		end
 	end
 
+	class RedTicket < QuizTest
+		def test_all_2
+			assert_equal 10, @m.red_ticket()
+		end
+
 end

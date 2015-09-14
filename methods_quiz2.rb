@@ -1,12 +1,13 @@
 module MethodsQuiz2
-	def without_doubles(die1,die2)
+	def without_doubles(die1, die2, no_doubles)
 		if (die1 != die2)
-			return die1+die2
-		elsif (die1 == die2) && (die1 < 6)
+			return die1 + die2
+		elsif (die1 == die2) && (die1 < 6) && (no_doubles)
 			return (die1 + 1) + die2			
-		end
-		if (die1 == die2) && (die1 == 6)
-			return (1 + die2)
+		elsif (die1 == die2) && (die1 == 6) && (no_doubles)
+			return (1 + die1)
+		elsif (die1 == die2) && (!no_doubles)
+			return (die1 + die2)
 		end
 	end
 
@@ -26,17 +27,11 @@ module MethodsQuiz2
 	end
 
 	def squirrels_play?(temperature, summer)
-	if (summer) && (temperature >= 60 && temperature <= 100)
-		return true
-	elsif (!summer) && (temperature >= 60 && temperature <= 90)
-			return true
-		end
-
+	temperature >= 60 && ((temperature <= 90 && !summer) || (temperature <= 100 && summer))
 	end
 
 	def red_ticket
 		
 	end
 	
-
 end
